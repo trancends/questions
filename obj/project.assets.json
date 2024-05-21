@@ -13,9 +13,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/home/trancends/code/interview/bank_indonesia/BankIndonesia/BankIndonesia.csproj",
-      "projectName": "BankIndonesia",
-      "projectPath": "/home/trancends/code/interview/bank_indonesia/BankIndonesia/BankIndonesia.csproj",
+      "projectUniqueName": "/home/trancends/code/interview/bank_indonesia/BankIndonesia/Questions.csproj",
+      "projectName": "Questions",
+      "projectPath": "/home/trancends/code/interview/bank_indonesia/BankIndonesia/Questions.csproj",
       "packagesPath": "/home/trancends/.nuget/packages/",
       "outputPath": "/home/trancends/code/interview/bank_indonesia/BankIndonesia/obj/",
       "projectStyle": "PackageReference",
