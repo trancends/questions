@@ -5,6 +5,7 @@ class Program
     static void Main(string[] args)
     {
         Soal1(15);
+        Soal2a(5);
     }
 
     static void Soal1(int n)
@@ -27,6 +28,18 @@ class Program
             {
                 Console.Write(i + " ");
             }
+        }
+    }
+
+    static void Soal2a(int n)
+    {
+        for (int i = 1; i <= n; i++)
+        {
+            for (int j = 1; j <= i; j++)
+            {
+                Console.Write(i);
+            }
+            Console.WriteLine();
         }
     }
 }
