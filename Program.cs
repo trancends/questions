@@ -14,6 +14,9 @@ class Program
         Console.WriteLine();
         Soal2d(5);
         Console.WriteLine();
+        var sortedN = Soal3([12, 9, 13, 6, 10, 4, 7, 2]);
+        Console.WriteLine(string.Join(" ", sortedN));
+        Console.WriteLine();
     }
 
     static void Soal1(int n)
@@ -149,5 +152,34 @@ class Program
             lists.Add(list);
             Console.WriteLine();
         }
+    }
+
+    static List<int> Soal3(List<int> n)
+    {
+        var filteredN = new List<int>();
+
+        foreach (var num in n)
+        {
+            if (num % 3 != 0)
+            {
+                filteredN.Add(num);
+            }
+        }
+
+        // sort filteredN ascending
+        for (int i = 0; i < filteredN.Count - 1; i++)
+        {
+            int minIndex = i;
+            for (int j = i + 1; j < filteredN.Count; j++)
+            {
+                if (filteredN[j] < filteredN[minIndex])
+                {
+                    minIndex = j;
+                }
+            }
+            (filteredN[minIndex], filteredN[i]) = (filteredN[i], filteredN[minIndex]);
+        }
+
+        return filteredN;
     }
 }
