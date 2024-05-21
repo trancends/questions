@@ -5,7 +5,11 @@ class Program
     static void Main(string[] args)
     {
         Soal1(15);
+        Console.WriteLine();
         Soal2a(5);
+        Console.WriteLine();
+        Soal2b(5);
+        Console.WriteLine();
     }
 
     static void Soal1(int n)
@@ -38,6 +42,18 @@ class Program
             for (int j = 1; j <= i; j++)
             {
                 Console.Write(i);
+            }
+            Console.WriteLine();
+        }
+    }
+
+    static void Soal2b(int n)
+    {
+        for (int i = 1; i <= n; i++)
+        {
+            for (int j = i; j >= 1; j--)
+            {
+                Console.Write(j);
             }
             Console.WriteLine();
         }
