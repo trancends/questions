@@ -1,5 +1,5 @@
 ﻿namespace BankIndonesia;
-
+using System.Linq;
 class Program
 {
     static void Main(string[] args)
@@ -9,6 +9,8 @@ class Program
         Soal2a(5);
         Console.WriteLine();
         Soal2b(5);
+        Console.WriteLine();
+        Soal2c(5);
         Console.WriteLine();
     }
 
@@ -55,6 +57,47 @@ class Program
             {
                 Console.Write(j);
             }
+            Console.WriteLine();
+        }
+    }
+
+    static void Soal2c(int n)
+    {
+        var lists = new List<List<int>>();
+
+        for (int i = 1; i <= n; i++)
+        {
+            var list = new List<int>();
+
+            for (int j = 1; j <= i; j++)
+            {
+                if (i == 1)
+                {
+                    list.Add(j);
+                    Console.Write(list[j - 1]);
+                }
+                else
+                {
+                    if (j == 1)
+                    {
+                        list.Add(lists[^1][^1] + 1);
+                    }
+                    else
+                    {
+                        if (list.Contains(5))
+                        {
+                            list.Add(list[^1] - 1);
+                        }
+                        else
+                        {
+                            list.Add(list[^1] + 1);
+                        }
+                    }
+                    Console.Write(list[j - 1]);
+                }
+            }
+
+            lists.Add(list);
             Console.WriteLine();
         }
     }
